@@ -1,0 +1,44 @@
+-J-Duser.language=
+-J-Duser.country=
+@options
+@packages
+-encoding
+'UTF-8'
+-protected
+--release
+17
+-sourcepath
+'G:/spring-boot-workspace-2024/maven-tutorial/src/main/java'
+-author
+-bottom
+'Copyright &#169; 2025 <a href="https://hanitech.com">hani tech solutions</a>. All rights reserved.'
+-charset
+'UTF-8'
+-d
+'G:/spring-boot-workspace-2024/maven-tutorial/target/reports/apidocs'
+-docencoding
+'UTF-8'
+-doctitle
+'maven-tutorial 1.0 API'
+-use
+-version
+-windowtitle
+'maven-tutorial 1.0 API'
+com.vodapally
+G:\spring-boot-workspace-2024\maven-tutorial\src\main\java = 1737206474209
+G:\spring-boot-workspace-2024\maven-tutorial\target\reports\apidocs\allclasses-index.html = 1737222286401
+G:\spring-boot-workspace-2024\maven-tutorial\target\reports\apidocs\allpackages-index.html = 1737222286407
+G:\spring-boot-workspace-2024\maven-tutorial\target\reports\apidocs\element-list = 1737222286205
+G:\spring-boot-workspace-2024\maven-tutorial\target\reports\apidocs\help-doc.html = 1737222286533
+G:\spring-boot-workspace-2024\maven-tutorial\target\reports\apidocs\index-all.html = 1737222286483
+G:\spring-boot-workspace-2024\maven-tutorial\target\reports\apidocs\index.html = 1737222286487
+G:\spring-boot-workspace-2024\maven-tutorial\target\reports\apidocs\jquery-ui.overrides.css = 1737222286944
+G:\spring-boot-workspace-2024\maven-tutorial\target\reports\apidocs\member-search-index.js = 1737222286423
+G:\spring-boot-workspace-2024\maven-tutorial\target\reports\apidocs\module-search-index.js = 1737222286413
+G:\spring-boot-workspace-2024\maven-tutorial\target\reports\apidocs\overview-tree.html = 1737222286314
+G:\spring-boot-workspace-2024\maven-tutorial\target\reports\apidocs\package-search-index.js = 1737222286418
+G:\spring-boot-workspace-2024\maven-tutorial\target\reports\apidocs\script.js = 1737222286572
+G:\spring-boot-workspace-2024\maven-tutorial\target\reports\apidocs\search.js = 1737222286605
+G:\spring-boot-workspace-2024\maven-tutorial\target\reports\apidocs\stylesheet.css = 1737222286568
+G:\spring-boot-workspace-2024\maven-tutorial\target\reports\apidocs\tag-search-index.js = 1737222286425
+G:\spring-boot-workspace-2024\maven-tutorial\target\reports\apidocs\type-search-index.js = 1737222286421

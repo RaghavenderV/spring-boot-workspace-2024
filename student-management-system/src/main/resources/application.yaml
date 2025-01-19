@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: student-management-system
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/vodapally?allowPublicKeyRetrieval=true&useSSL=false
+    username: root
+    password: raghu
+  jpa:
+    database-platform: org.hibernate.dialect.MySQLDialect
+    generate-ddl: true
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+

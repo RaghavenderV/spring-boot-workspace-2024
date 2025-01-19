@@ -1,0 +1,17 @@
+server:
+  port: 5000
+spring:
+  application:
+    name: student-management-system
+  datasource:
+    #driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://raghu-db-instance.cd4m8qy2og5q.us-east-1.rds.amazonaws.com:3306/sms?useSSL=false
+    username: root
+    password: raghu3055
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+    generate-ddl: true
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+

@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: spring-tx-propagation
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/vodapally?allowPublicKeyRetrieval=true&useSSL=false
+    username: root
+    password: raghu
+  jpa:
+    database-platform: org.hibernate.dialect.MySQLDialect
+    generate-ddl: true
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+#Enable transaction debug logs
+logging:
+  level:
+    org:
+      springframework:
+        transaction: DEBUG
+        orm:
+          jpa:
+            JpaTransactionManager: DEBUG
+      hibernate:
+        transaction: DEBUG
+
+
