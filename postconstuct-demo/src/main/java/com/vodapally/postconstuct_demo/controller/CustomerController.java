@@ -13,7 +13,7 @@ public class CustomerController {
     private CustomerService customerService;
 
     public CustomerController() {
-        //System.out.println(customerService.getCustomer()); //test this
+        //System.out.println(customerService.getCustomer()); //test this -> NullPointerException
         System.out.println("Constructor :: CustomerController");
     }
 
