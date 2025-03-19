@@ -22,8 +22,8 @@ public class Student {
     private Long id;
 
     @Column(name = "first_name")
-    @NotNull(message = "First Name can not be Null")
-    @NotBlank(message = "FirstName can not be blank")
+    @NotNull(message = "First Name can not be null")
+    @NotBlank(message = "First Name can not be blank")
     private String firstName;
 
     @Column(name = "last_name")

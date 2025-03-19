@@ -3,6 +3,7 @@ package com.vodapally.spring_boot_interceptor_app.interceptor;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.extern.slf4j.Slf4j;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
@@ -10,10 +11,11 @@ import org.springframework.web.servlet.ModelAndView;
 @Slf4j
 @Component
 public class LoggingInterceptor implements HandlerInterceptor {
+
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
-        log.info("Request URL : "+request.getRequestURL());
-        log.info("Request Method : "+request.getMethod());
+        System.out.println("Request URL : "+request.getRequestURL());
+        System.out.println("Request Method : "+request.getMethod());
         return true;
     }
 
@@ -25,6 +27,6 @@ public class LoggingInterceptor implements HandlerInterceptor {
     @Override
     public void afterCompletion(HttpServletRequest request, HttpServletResponse response, Object handler, Exception ex) throws Exception {
         //Can log after completion details here
-        log.info("Request process completed...");
+        System.out.println("Request process completed...");
     }
 }

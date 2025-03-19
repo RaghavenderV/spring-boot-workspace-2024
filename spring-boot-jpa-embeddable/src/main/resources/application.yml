@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: spring-boot-jpa-embeddable
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/vodapally?useSSL=false
+    username: root
+    password: raghu
+  jpa:
+    database-platform: org.hibernate.dialect.MySQLDialect
+    generate-ddl: true
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+
+

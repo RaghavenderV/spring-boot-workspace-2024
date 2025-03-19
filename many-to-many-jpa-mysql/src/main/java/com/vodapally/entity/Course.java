@@ -30,6 +30,5 @@ public class Course {
     //@JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "id", scope = Integer.class)
     //@JsonIgnore
     @ManyToMany(mappedBy = "courses", cascade = CascadeType.ALL)
-    @JsonBackReference
     private Set<Student> students = new HashSet<>();
 }

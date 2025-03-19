@@ -34,6 +34,6 @@ public class Student {
             }
     )
     //@JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "id", scope = Integer.class)
-    @JsonManagedReference // stackoverflow error for lombok issue - not related to jpa
-    private Set<Course> courses = new HashSet<>();;
+    //@JsonManagedReference // stackoverflow error for lombok issue - not related to jpa
+    private Set<Course> courses = new HashSet<>();
 }

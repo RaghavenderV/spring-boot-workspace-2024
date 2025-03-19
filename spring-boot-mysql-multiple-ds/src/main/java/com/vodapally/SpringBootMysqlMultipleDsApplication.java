@@ -25,8 +25,8 @@ public class SpringBootMysqlMultipleDsApplication {
 	public void initDBRecords() {
 
 		List<Employee> employees = new ArrayList<>();
-		employees.add(new Employee("John Doe", "HR", 50000.0, "john@example.com", 30));
-		employees.add(new Employee("Jane Smith", "Finance", 60000.0, "jane@example.com", 35));
+		employees.add(new Employee("Raghu", "HR", 50000.0, "john@example.com", 30));
+		employees.add(new Employee("Akshay", "IT", 60000.0, "jane@example.com", 35));
 		employeeRepository.saveAll(employees);
 
 		List<Department> departments = new ArrayList<>();

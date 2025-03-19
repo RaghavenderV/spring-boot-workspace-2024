@@ -27,7 +27,6 @@ public class StudentCourseController {
 
     @GetMapping("/{studentId}")
     public Student findStudent(@PathVariable int studentId){
-
         return service.findStudent(studentId);
     }
 

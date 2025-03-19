@@ -10,5 +10,5 @@ import java.util.List;
 public interface UserClient {
 
     @GetMapping("/users")
-    public List<UserResponse> getUsers();
+    List<UserResponse> getUsers();
 }

@@ -60,8 +60,9 @@
 						<a th:href = "@{/students/edit/{id}(id=${student.id})}"
 						 class = "btn btn-primary">Update</a>
 						
-						<a th:href = "@{/students/{id}(id=${student.id})}"
-						 class = "btn btn-danger">Delete</a>
+						<a th:href = "@{/students/{id}(id=${student.id})}" onclick = "return confirm('Are you sure?')"
+						 class = "btn btn-danger">Delete
+						</a>
 						 
 					</td>
 				</tr>

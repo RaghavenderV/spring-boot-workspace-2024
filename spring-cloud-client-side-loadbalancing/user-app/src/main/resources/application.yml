@@ -1,0 +1,13 @@
+server:
+  port: 9090
+spring:
+  application:
+    name: user-app
+  cloud:
+    loadbalancer:
+      enabled: false
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+

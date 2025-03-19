@@ -7,6 +7,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 public interface WorkerClient {
 
     @GetMapping("/company")
-    public String worker();
+    String worker();
 
 }

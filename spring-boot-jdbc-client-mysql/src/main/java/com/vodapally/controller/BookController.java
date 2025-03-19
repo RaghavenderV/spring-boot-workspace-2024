@@ -1,6 +1,7 @@
 package com.vodapally.controller;
 
 import com.vodapally.entity.Book;
+import com.vodapally.service.BookService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.simple.JdbcClient;
 import org.springframework.web.bind.annotation.*;
@@ -13,47 +14,35 @@ import java.util.Optional;
 public class BookController {
 
     @Autowired
-    private JdbcClient jdbcClient;
+    private BookService bookService;
 
     @PostMapping
-    public String addNewBook(@RequestBody Book book){
-        System.out.println("Book---------->"+book);
-        jdbcClient.sql("INSERT INTO Book(id, name, title) values(?,?,?)")
-                .param(List.of(book.getId(), book.getName(), book.getTitle()))
-                .update();
+    public String addNewBook(@RequestBody Book book) {
+        System.out.println("Book---------->" + book);
+        int id = bookService.addNewBook(book);
 
-        return "New Book added successfully";
+        return id==1?"Added new book successfully!!":"Error creating book";
     }
 
     @GetMapping
-    public List<Book> getAllBooks(){
-        return jdbcClient.sql("SELECT id, name, title FROM Book")
-                .query(Book.class)
-                .list();
+    public List<Book> getAllBooks() {
+        return bookService.getAllBooks();
     }
 
     @GetMapping("/{bookId}")
-    public Optional<Book> getBookById(@PathVariable int id){
-        return jdbcClient.sql("SELECT id, name, title FROM Book where id=:id")
-                .param("id",id)
-                .query(Book.class)
-                .optional();
+    public Optional<Book> getBookById(@PathVariable(name = "bookId") int id) {
+        return bookService.getBookById(id);
     }
 
-    @PutMapping("/{id}")
-    public String updateBook(@PathVariable int id, @RequestBody Book book){
-        jdbcClient.sql("UPDATE BOOK SET TITLE = ? , NAME=? WHERE ID=?")
-                .param(List.of(book.getTitle(), book.getName(), id))
-                .update();
-
-        return "Book updated successfully!!";
+    @PutMapping
+    public String updateBook(@RequestBody Book book) {
+        int id = bookService.updateBook(book);
+        return id==1?"Updated book successfully!!":"Error updating book";
     }
 
     @DeleteMapping("/{id}")
-    public String deleteBook(@PathVariable int id){
-        jdbcClient.sql("delete from book where id=:id")
-                .param("id",id)
-                .update();
-        return "Book deleted successfully!!";
+    public String deleteBook(@PathVariable int id) {
+        int i = bookService.deleteById(id);
+        return i==1?"Book deleted successfully!!":"Error deleting book";
     }
 }

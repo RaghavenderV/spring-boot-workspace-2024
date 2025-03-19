@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: spring-boot-security-google
+  security:
+    oauth2:
+      client:
+        registration:
+          github:
+            clientId: Ov23lixUIrt4s84tdg1R
+            clientSecret: 8966d7b293b3d8895bbf87a27a80c07e15ba18a8
+            scope:
+              - read:user

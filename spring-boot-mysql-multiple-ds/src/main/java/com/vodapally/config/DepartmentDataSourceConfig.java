@@ -26,7 +26,7 @@ import java.util.Map;
 public class DepartmentDataSourceConfig {
 
     @Bean(name = "departmentProperties")
-    @ConfigurationProperties("spring.datasource.department")
+    @ConfigurationProperties(prefix = "spring.datasource.department")
     public DataSourceProperties dataSourceProperties() {
         return new DataSourceProperties();
     }

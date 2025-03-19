@@ -3,11 +3,11 @@ spring:
     name: spring-boot-jdbc-client-mysql
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/sms?useSSL=false
+    url: jdbc:mysql://localhost:3306/vodapally?useSSL=false
     username: root
     password: raghu
   jpa:
-    database-platform: org.hibernate.dialect.MySQL8Dialect
+    database-platform: org.hibernate.dialect.MySQLDialect
     generate-ddl: true
     show-sql: true
     hibernate:

@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: one-to-many-spring-boot-jpa
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/vodapally
+    username: root
+    password: raghu
+  jpa:
+    database-platform: org.hibernate.dialect.MySQLDialect
+    generate-ddl: true
+    show-sql: true
+    hibernate:
+      ddl-auto: update
